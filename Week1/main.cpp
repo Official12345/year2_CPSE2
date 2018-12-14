@@ -81,7 +81,6 @@ int main(int argc, char *argv[]) {
 		leftwall.draw(window);
 		rightwall.draw(window);
 		player1.draw(window);
-		std::cout << "player position: " << player1.getPosition().x << " , " << player1.getPosition().y << "\n";
 		window.display();
 
 		my_ball.detect(topwall);

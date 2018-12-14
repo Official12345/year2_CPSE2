@@ -16,9 +16,9 @@ TB_box.setSize({ size, size * 2});
 }
 
 void ball::draw(sf::RenderWindow & window) const{
-	//window.draw(circle);
-	window.draw(LR_box);
-	window.draw(TB_box);
+	window.draw(circle);
+	//window.draw(LR_box);
+	//window.draw(TB_box);
 }
 
 void ball::move() {
