@@ -10,10 +10,11 @@ public:
 	player(sf::Vector2f position, sf::Vector2f size, sf::Color color);
 	void draw(sf::RenderWindow & window) const;
 	sf::Vector2f getPosition();
-	sf::Vector2f player::getSize() override;
+	sf::Vector2f getSize() override;
 	sf::FloatRect getGlobalBounds() override;
 	void inputMove(sf::Vector2f delta);
-	void jump(sf::Vector2i);
+	void jump(sf::Vector2f target);
+	void jump(sf::Vector2i target);
 
 private:
 	sf::Vector2f position;

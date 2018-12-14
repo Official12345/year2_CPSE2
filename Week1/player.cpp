@@ -32,6 +32,14 @@ void player::inputMove(sf::Vector2f delta) {
 	rect.setPosition(position);
 }
 
+void player::jump(sf::Vector2f target) {
+	position = target;
+	rect.setPosition(target);
+}
+
 void player::jump(sf::Vector2i target) {
-	sf::Vector2f(target);
+	jump(sf::Vector2f(
+		static_cast<float>(target.x),
+		static_cast<float>(target.y)
+	));
 }
