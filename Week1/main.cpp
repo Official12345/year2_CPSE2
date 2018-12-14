@@ -64,7 +64,7 @@ int main(int argc, char *argv[]) {
 		action(sf::Keyboard::Right, [&]() { player1.inputMove(sf::Vector2f(+1.0,  0.0)); }),
 		action(sf::Keyboard::Up,    [&]() { player1.inputMove(sf::Vector2f(0.0, -1.0)); }),
 		action(sf::Keyboard::Down,  [&]() { player1.inputMove(sf::Vector2f(0.0, +1.0)); }),
-		//action(sf::Mouse::Left,     [&]() { player1.jump(sf::Mouse::getPosition(window)); })
+		action(sf::Mouse::Left,     [&]() { player1.jump(sf::Mouse::getPosition(window)); })
 	};
 	
 
@@ -74,12 +74,14 @@ int main(int argc, char *argv[]) {
 		}
 
 		window.clear();
+
 		my_ball.draw(window);
 		topwall.draw(window);
 		bottomwall.draw(window);
 		leftwall.draw(window);
 		rightwall.draw(window);
 		player1.draw(window);
+		std::cout << "player position: " << player1.getPosition().x << " , " << player1.getPosition().y << "\n";
 		window.display();
 
 		my_ball.detect(topwall);

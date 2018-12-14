@@ -31,3 +31,7 @@ void player::inputMove(sf::Vector2f delta) {
 	position += delta;
 	rect.setPosition(position);
 }
+
+void player::jump(sf::Vector2i target) {
+	sf::Vector2f(target);
+}

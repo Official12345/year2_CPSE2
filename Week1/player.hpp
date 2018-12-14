@@ -13,6 +13,7 @@ public:
 	sf::Vector2f player::getSize() override;
 	sf::FloatRect getGlobalBounds() override;
 	void inputMove(sf::Vector2f delta);
+	void jump(sf::Vector2i);
 
 private:
 	sf::Vector2f position;
