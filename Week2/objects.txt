@@ -1,0 +1,5 @@
+(953,314) PICTURE sonic2.png (480,480)
+(876,236) PICTURE pikachu2.png (200,219)
+(202,276) CIRCLE white 100
+(500,147) RECTANGLE green (200,100)
+(615,390) LINE green 100 20
