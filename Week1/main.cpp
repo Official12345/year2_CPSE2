@@ -76,6 +76,7 @@ int main(int argc, char *argv[]) {
 
 		window.clear();
 
+		/*
 		my_ball.draw(window);
 		topwall.draw(window);
 		bottomwall.draw(window);
@@ -83,8 +84,7 @@ int main(int argc, char *argv[]) {
 		rightwall.draw(window);
 		player1.draw(window);
 		window.display();
-
-		/*
+		
 		my_ball.detect(topwall);
 		my_ball.detect(bottomwall);
 		my_ball.detect(rightwall);
@@ -94,8 +94,8 @@ int main(int argc, char *argv[]) {
 		*/
 		
 		for (auto object : objects) {
-			my_ball.detect(object);
-			object.draw();
+			my_ball.detect(*object);
+			object->draw(window);
 		}
 		my_ball.move();
 
