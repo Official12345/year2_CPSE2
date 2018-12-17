@@ -1,18 +1,9 @@
-src = $(wildcard *.cpp)
-headers = $(wildcard *.hpp)
-
-FLAGS = -lsfml-graphics -lsfml-window -lsfml-system -lstdc++
-
-applicationName = application
-
-$(applicationName): $(src) $(headers)
-	g++ -o $@ $^ $(FLAGS)
-
-build: $(applicationName)
-
+build:
+	g++ -std=c++17 main.cpp ball.cpp line.cpp picture.cpp rectangle.cpp -o game -lsfml-graphics -lsfml-window -lsfml-system -lstdc++
+	
 run: build
-	./$(applicationName)
+	./game
 
-.PHONY: clean
 clean:
-	rm -f $(obj) $(applicationName)
+	rm game
+	rm -f *.o

@@ -13,4 +13,6 @@ public:
 	virtual sf::Vector2f get_size() = 0;
 	virtual std::string get_name() = 0;
 	virtual std::string get_path() = 0;
+	virtual float get_rotation() = 0;
+	virtual float get_length() = 0;
 };

@@ -24,4 +24,6 @@ public:
 	std::string get_name() override;
 	sf::Color string_to_color(std::string);
 	std::string get_path() override;
+	float get_rotation() override;
+	float get_length() override;
 };

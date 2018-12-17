@@ -63,3 +63,11 @@ sf::Color rectangle::string_to_color(std::string color) {
 std::string rectangle::get_name() {
 	return name;
 }
+
+float rectangle::get_rotation() {
+	return 0;
+}
+
+float rectangle::get_length() {
+	return 0;
+}

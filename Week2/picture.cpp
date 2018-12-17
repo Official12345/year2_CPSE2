@@ -43,3 +43,11 @@ std::string picture::get_name() {
 std::string picture::get_path() {
 	return file_name;
 }
+
+float picture::get_rotation() {
+	return 0;
+}
+
+float picture::get_length() {
+	return 0;
+}

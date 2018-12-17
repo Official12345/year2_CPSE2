@@ -65,3 +65,11 @@ sf::Color line::string_to_color(std::string color) {
 		return sf::Color::White;
 	}
 }
+
+float line::get_rotation() {
+	return rotation;
+}
+
+float line::get_length() {
+	return length;
+}

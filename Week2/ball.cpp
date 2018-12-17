@@ -63,3 +63,11 @@ sf::Color ball::string_to_color(std::string color) {
 		return sf::Color::White;
 	}
 }
+
+float ball::get_rotation() {
+	return 0;
+}
+
+float ball::get_length() {
+	return 0;
+}

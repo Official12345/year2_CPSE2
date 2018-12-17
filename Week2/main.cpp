@@ -105,8 +105,9 @@ int main(int argc, char *argv[]) {
 					}
 					else if (dynamic_cast<line*>(object)) {
 						buffer_file << " LINE ";
-						buffer_file << (object->get_path()) << " ";
-						buffer_file << (object->get_size().x);
+						buffer_file << (object->get_color());
+						buffer_file << (object->get_length()) << " ";
+						buffer_file << (object->get_rotation());
 					}
 					else {
 						throw unknown_shape();

@@ -22,4 +22,6 @@ public:
 	sf::Vector2f get_size() override;
 	std::string get_name() override;
 	std::string get_path() override;
+	float get_rotation() override;
+	float get_length() override;
 };
