@@ -67,6 +67,7 @@ int main(int argc, char *argv[]) {
 		action(sf::Mouse::Left,     [&]() { player1.jump(sf::Mouse::getPosition(window)); })
 	};
 	
+	std::array< screenObject *, 6 > objects = { &player1, &topwall, &bottomwall, &leftwall, &rightwall, &my_ball};
 
 	while (window.isOpen()) {
 		for (auto & action : actions) {
@@ -83,11 +84,19 @@ int main(int argc, char *argv[]) {
 		player1.draw(window);
 		window.display();
 
+		/*
 		my_ball.detect(topwall);
 		my_ball.detect(bottomwall);
 		my_ball.detect(rightwall);
 		my_ball.detect(leftwall);
 		my_ball.detect(player1);
+		my_ball.move();
+		*/
+		
+		for (auto object : objects) {
+			my_ball.detect(object);
+			object.draw();
+		}
 		my_ball.move();
 
 		//std::cout << "ball x: " << my_ball.getPosition().x << "\n";
